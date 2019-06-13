@@ -1,0 +1,94 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Process Bar -->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+<script type='text/javascript'>
+    $({property: 0}).animate({property: 100}, {
+        duration: 3000,
+        step: function() {
+            var percentage = Math.round(this.property);
+
+            $('#progress').css('width',  percentage+"%");
+
+            if(percentage == 100) {
+                $("#progress").addClass("done");//完成，隐藏进度条
+            }
+        }
+    });
+</script>
+<style type="text/css">
+body{
+    margin:0;
+}
+#progress {
+    position:fixed;
+    height: 2px;
+    background:#b91f1f;
+    transition:opacity 500ms linear
+}
+#progress.done {
+    opacity:0
+}
+#progress span {
+    position:absolute;
+    height:2px;
+    -webkit-box-shadow:#b91f1f 1px 0 6px 1px;
+    -webkit-border-radius:100%;
+    opacity:1;
+    width:150px;
+    right:-10px;
+    -webkit-animation:pulse 2s ease-out 0s infinite;
+}
+
+@-webkit-keyframes pulse {
+    30% {
+        opacity:.6
+    }
+    60% {
+        opacity:0;
+    }
+    100% {
+        opacity:.6
+    }
+}  
+</style>
+    
+<div id="progress">
+  <span></span>
+</div>
+{% include intro.html %}
+<!--{% include supervision.html %}-->
+{% include honors_and_awards.html %}
+{% include teaching_assistant.html %}
+<!-- a=m.width=window.innerWidth||document.-->
+<script>
+  !function(){function n(n,e,t){return n.getAttribute(e)||t}function e(n){return document.getElementsByTagName(n)}function t(){var t=e("script"),o=t.length,i=t[o-1];return{l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","138,43,226"),n:n(i,"count",120)}}function o(){a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function i(){r.clearRect(0,0,a,c);var n,e,t,o,m,l;s.forEach(function(i,x){for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))}),x(i)}var a,c,u,m=document.createElement("canvas"),d=t(),l="c_n"+d.l,r=m.getContext("2d"),x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/45)},w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,window.onmousemove=function(n){n=n||window.event,y.x=n.clientX,y.y=n.clientY},window.onmouseout=function(){y.x=null,y.y=null};for(var s=[],f=0;d.n>f;f++){var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})}u=s.concat([y]),setTimeout(function(){i()},100)}();
+</script>
+
+
+<section class="post-list">
+  <div class="container">
+  <a name="publications"></a>
+  <h2 class="category-title">Publications</h2>
+  <span class="post-meta date-label">Journals:</span>
+  <br>
+  <div class="article-title"> Ziwei Li, Ke Xu, Haiyang Wang, <strong>Yi Zhao</strong>, Xiaoliang Wang, Meng Shen. <a class="post-link" href="https://yizhao-tsinghua.github.io/papers/ZiweiLi_IEEE_Network.pdf" target="_blank">Machine Learning-based Positioning: A Survey and Future Direction</a>. <em>IEEE Network</em>, 33(3): 96--101, May/June 2019. <font color="red"><em>JCR Q1, IF: 7.19</em></font>
+  <br>
+  <div class="article-title"> Hui Su, Qi Tan, <strong>Yi Zhao</strong>, Ke Xu. <a class="post-link" href="https://yizhao-tsinghua.github.io/papers/HuiSu_journal_of_tsinghua_university.pdf" target="_blank">Pricing strategy and revenue allocation between service providers in mobile sponsored markets</a>. <em>Journal of Tsinghua University (Science and Technology)</em> (in Chinese), 58(1): 8--13, Jan. 2018.
+  <br>
+  <br>
+  <span class="post-meta date-label">Conference Papers:</span>
+  <br>
+  <div class="article-title"> <strong>Yi Zhao</strong>, Hui Su, Liang Zhang, Dan Wang, Ke Xu. <a class="post-link" href="https://yizhao-tsinghua.github.io/"> Variety Matters: A New Model for the Wireless Data Market under Sponsored Data Plans</a>. To appera in <em>Proceedings of IEEE/ACM IWQoS</em>, Phoenix, Arizona, USA, June 2019. <font color="red"><em>CCF B, AR: 27.4%</em></font>
+  <br>
+  <div class="article-title"> Xiaohua Xu, <strong>Yi Zhao</strong>, Dongfang Zhao, Lei Yang, Spiridon Bakiras. <a class="post-link" href="https://yizhao-tsinghua.github.io/"> Distributed Real-time Data Aggregation Scheduling in Duty-Cycled Multi-hop Sensor Networks</a>. To appear in <em>Proceedings of WASA</em>, Honolulu, Hawaii, USA, June 2019. <font color="red"><em>CCF C, AR: 33.8%</em></font>
+  <br>
+  <div class="article-title"> <strong>Yi Zhao</strong>, Meina Qiao, Haiyang Wang, Rui Zhang, Dan Wang, Ke Xu, Qi Tan. <a class="post-link" href="https://yizhao-tsinghua.github.io/"> TDFI: Two-stage Deep Learning Framework for Friendship Inference via Multi-source Information</a>. To appera in <em>Proceedings of IEEE INFOCOM</em>, Pairs, France, Apr. 2019. <font color="red"><em>CCF A, AR: 19.7%</em></font>
+  <br>
+  </div>
+</section>
+{% include records_map.html %}

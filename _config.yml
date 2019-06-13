@@ -1,0 +1,59 @@
+
+# SEO settings
+title: ""
+title2: "Yi Zhao" # default: ""
+description: "Tsinghua University"
+keywords: "Yi Zhao, deep learning, neural networks, machine learning"
+url: http://yizhao-tsinghua.github.io # site url
+#baseurl: "/yizhao" # apply repo name if use it under gh-pages branch
+baseurl: null # apply null if repo name is something like username.github.io
+
+google_analytics: UA-110096440-1
+repo: http://yizhao-tsinghua.github.io
+disqus_shortname: "yizhao"
+twitter_username: "yizhao"
+comments: true
+
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : "Yi Zhao"
+  job      : "PhD student"
+  bio      : "."
+  thumb    : /images/author.jpg
+  email    : zhaoyi16@mails.tsinghua.edu.cn
+  url      : http://yizhao-tsinghua.github.io
+  #github   : http://github.com/jimmylba
+  #twitter  : http://twitter.com/jimmylba
+  #facebook : https://www.facebook.com/jimmyleiba
+  #linkedin : http://linkedin.com/in/jimmylba
+
+# social settings
+og_locale: "en_US"
+#twitter_card: "summary_large_image"
+#twitter_site: "@just_go_nwpu"
+
+gems:
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
